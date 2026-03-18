@@ -1,18 +1,17 @@
+import { CartProvider } from "@/context/CartContext";
+import { WishlistProvider } from "@/context/WishlistContex";
 import "@/global.css";
 import { Stack } from "expo-router";
-
-export const unstable_settings = {
-  anchor: "(tabs)",
-};
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export default function RootLayout() {
   return (
-    <Stack>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen
-        name="modal"
-        options={{ presentation: "modal", title: "Modal" }}
-      />
-    </Stack>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <CartProvider>
+        <WishlistProvider>
+          <Stack screenOptions={{ headerShown: false }} />
+        </WishlistProvider>
+      </CartProvider>
+    </GestureHandlerRootView>
   );
 }

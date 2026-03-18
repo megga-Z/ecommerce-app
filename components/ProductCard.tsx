@@ -1,13 +1,15 @@
 import { COLORS } from "@/constants";
 import { ProductCardProps } from "@/constants/types";
+import { useWishlist } from "@/context/WishlistContex";
 import { Ionicons } from "@expo/vector-icons";
 import { Link } from "expo-router";
-
 import React from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 
 export default function ProductCard({ product }: ProductCardProps) {
-  const isLiked = false;
+  const { toggleWishlist, isInWishlist } = useWishlist();
+  const isLiked = isInWishlist(product._id);
+
   return (
     <Link href={`/product/${product._id}`} asChild>
       <TouchableOpacity
@@ -27,6 +29,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                   shadow-sm "
             onPress={(e) => {
               e.stopPropagation();
+              toggleWishlist(product);
             }}
           >
             <Ionicons
