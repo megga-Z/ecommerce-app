@@ -14,5 +14,14 @@
     ".expo/types/**/*.ts",
     "expo-env.d.ts",
     "nativewind-env.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "assets/admin/**/*",
+    "assets/auth/**/*",
+    "assets/orders/**/*",
+    "assets/addresses/**/*",
+    "assets/types/**/*",
+    "assets/scripts/**/*"
   ]
 }

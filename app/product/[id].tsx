@@ -2,7 +2,7 @@ import { dummyProducts } from "@/assets/assets";
 import { COLORS } from "@/constants";
 import { Product } from "@/constants/types";
 import { useCart } from "@/context/CartContext";
-import { useWishlist } from "@/context/WishlistContex";
+import { useWishlist } from "@/context/WishlistContext";
 import { Ionicons } from "@expo/vector-icons";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import React, { useEffect, useState } from "react";

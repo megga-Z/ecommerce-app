@@ -1,0 +1,50 @@
+assets/addresses/index.tsx(5,20): error TS1149: File name 'C:/Users/mega/Documents/reacte native/ecommerce-app/components/Header.tsx' differs from already included file name 'C:/Users/mega/Documents/reacte native/ecommerce-app/components/header.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/app/shop.tsx'
+    Imported via "@/components/header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/app/(tabs)/cart.tsx'
+    Imported via "@/components/header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/app/(tabs)/favorite.tsx'
+    Imported via "@/components/header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/app/(tabs)/index.tsx'
+    Imported via "@/components/header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/app/(tabs)/profile.tsx'
+    Imported via "@/components/Header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/assets/addresses/index.tsx'
+    Imported via "@/components/Header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/assets/orders/[id].tsx'
+    Imported via "@/components/Header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/assets/orders/index.tsx'
+    Matched by include pattern '**/*.tsx' in 'C:/Users/mega/Documents/reacte native/ecommerce-app/tsconfig.json'
+assets/admin/products/add.tsx(6,30): error TS2307: Cannot find module 'expo-image-picker' or its corresponding type declarations.
+assets/admin/products/add.tsx(34,45): error TS7006: Parameter 'asset' implicitly has an 'any' type.
+assets/admin/products/edit/[id].tsx(7,30): error TS2307: Cannot find module 'expo-image-picker' or its corresponding type declarations.
+assets/admin/products/edit/[id].tsx(74,45): error TS7006: Parameter 'asset' implicitly has an 'any' type.
+assets/admin/products/index.tsx(61,48): error TS2345: Argument of type '"/admin/products/add"' is not assignable to parameter of type '"/" | RelativePathString | ExternalPathString | "/shop" | `/shop?${string}` | `/shop#${string}` | "/_sitemap" | `/_sitemap?${string}` | `/_sitemap#${string}` | "/(tabs)" | "/(tabs)/cart" | ... 32 more ... | { ...; }'.
+assets/admin/products/index.tsx(96,64): error TS2345: Argument of type '`/admin/products/edit/${any}`' is not assignable to parameter of type '"/" | RelativePathString | ExternalPathString | "/shop" | `/shop?${string}` | `/shop#${string}` | "/_sitemap" | `/_sitemap?${string}` | `/_sitemap#${string}` | "/(tabs)" | "/(tabs)/cart" | ... 32 more ... | { ...; }'.
+assets/auth/sign-in.tsx(2,27): error TS2307: Cannot find module '@clerk/clerk-expo' or its corresponding type declarations.
+assets/auth/sign-in.tsx(3,38): error TS2307: Cannot find module '@clerk/types' or its corresponding type declarations.
+assets/auth/sign-in.tsx(40,85): error TS7006: Parameter 'factor' implicitly has an 'any' type.
+assets/auth/sign-in.tsx(114,31): error TS2322: Type '"/sign-up"' is not assignable to type '"/" | RelativePathString | ExternalPathString | "/shop" | `/shop?${string}` | `/shop#${string}` | "/_sitemap" | `/_sitemap?${string}` | `/_sitemap#${string}` | "/(tabs)" | "/(tabs)/cart" | ... 32 more ... | { ...; }'.
+assets/auth/sign-up.tsx(7,27): error TS2307: Cannot find module '@clerk/clerk-expo' or its corresponding type declarations.
+assets/auth/sign-up.tsx(141,31): error TS2322: Type '"/sign-in"' is not assignable to type '"/" | RelativePathString | ExternalPathString | "/shop" | `/shop?${string}` | `/shop#${string}` | "/_sitemap" | `/_sitemap?${string}` | `/_sitemap#${string}` | "/(tabs)" | "/(tabs)/cart" | ... 32 more ... | { ...; }'.
+assets/orders/[id].tsx(6,20): error TS1149: File name 'C:/Users/mega/Documents/reacte native/ecommerce-app/components/Header.tsx' differs from already included file name 'C:/Users/mega/Documents/reacte native/ecommerce-app/components/header.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/app/shop.tsx'
+    Imported via "@/components/header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/app/(tabs)/cart.tsx'
+    Imported via "@/components/header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/app/(tabs)/favorite.tsx'
+    Imported via "@/components/header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/app/(tabs)/index.tsx'
+    Imported via "@/components/header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/app/(tabs)/profile.tsx'
+    Imported via "@/components/Header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/assets/addresses/index.tsx'
+    Imported via "@/components/Header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/assets/orders/[id].tsx'
+    Imported via "@/components/Header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/assets/orders/index.tsx'
+    Matched by include pattern '**/*.tsx' in 'C:/Users/mega/Documents/reacte native/ecommerce-app/tsconfig.json'
+assets/orders/index.tsx(6,20): error TS1149: File name 'C:/Users/mega/Documents/reacte native/ecommerce-app/components/Header.tsx' differs from already included file name 'C:/Users/mega/Documents/reacte native/ecommerce-app/components/header.tsx' only in casing.
+  The file is in the program because:
+    Imported via "@/components/header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/app/shop.tsx'
+    Imported via "@/components/header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/app/(tabs)/cart.tsx'
+    Imported via "@/components/header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/app/(tabs)/favorite.tsx'
+    Imported via "@/components/header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/app/(tabs)/index.tsx'
+    Imported via "@/components/header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/app/(tabs)/profile.tsx'
+    Imported via "@/components/Header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/assets/addresses/index.tsx'
+    Imported via "@/components/Header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/assets/orders/[id].tsx'
+    Imported via "@/components/Header" from file 'C:/Users/mega/Documents/reacte native/ecommerce-app/assets/orders/index.tsx'
+    Matched by include pattern '**/*.tsx' in 'C:/Users/mega/Documents/reacte native/ecommerce-app/tsconfig.json'
+assets/orders/index.tsx(45,56): error TS2345: Argument of type '`/orders/${string}`' is not assignable to parameter of type '"/" | RelativePathString | ExternalPathString | "/shop" | `/shop?${string}` | `/shop#${string}` | "/_sitemap" | `/_sitemap?${string}` | `/_sitemap#${string}` | "/(tabs)" | "/(tabs)/cart" | ... 32 more ... | { ...; }'.
+assets/scripts/seedProducts.ts(1,22): error TS2307: Cannot find module 'mongoose' or its corresponding type declarations.
+assets/scripts/seedProducts.ts(2,21): error TS2307: Cannot find module '../models/Product.js' or its corresponding type declarations.
+assets/types/index.ts(1,33): error TS2307: Cannot find module 'mongoose' or its corresponding type declarations.
+components/ProductCard.tsx(3,29): error TS2307: Cannot find module '@/context/WishlistContex' or its corresponding type declarations.
