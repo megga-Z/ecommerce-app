@@ -1,5 +1,5 @@
 import { CartProvider } from "@/context/CartContext";
-import { WishlistProvider } from "@/context/WishlistContex";
+import { WishlistProvider } from "@/context/WishlistContext";
 import "@/global.css";
 import { Stack } from "expo-router";
 import { GestureHandlerRootView } from "react-native-gesture-handler";

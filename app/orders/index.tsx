@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { FlatList, Text, TouchableOpacity, View, ActivityIndicator, ScrollView, Image } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { SafeAreaView } from "react-native-safe-area-context";
-import Header from "@/components/Header";
+import Header from "@/components/header";
 import { COLORS, getStatusColor } from "@/constants";
 import type { Order } from "@/constants/types";
 import { dummyOrders, formatDate } from "@/assets/assets";
@@ -42,7 +42,7 @@ export default function Orders() {
                     renderItem={({ item, index }) => (
                         <TouchableOpacity
                             className="bg-white p-4 rounded-xl mb-4 border border-gray-100 shadow-sm"
-                            onPress={() => router.push(`/orders/${item._id}`)}
+                            onPress={() => router.push({ pathname: "/orders/[id]", params: { id: item._id } })}
                         >
                             <View className="flex-row justify-between mb-2">
                                 <Text className="text-primary font-bold">Order #{item.orderNumber}</Text>

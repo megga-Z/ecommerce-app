@@ -1,6 +1,6 @@
 import { COLORS } from "@/constants";
 import { ProductCardProps } from "@/constants/types";
-import { useWishlist } from "@/context/WishlistContex";
+import { useWishlist } from "@/context/WishlistContext";
 import { Ionicons } from "@expo/vector-icons";
 import { Link } from "expo-router";
 import React from "react";

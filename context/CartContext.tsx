@@ -55,17 +55,63 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setIsLoading(false);
   };
 
-  const addToCart = async (product: Product, size: string) => {};
+  const addToCart = async (product: Product, size: string) => {
+    setCartItems((prev) => {
+      const existingItem = prev.find((item) => item.productId === product._id && item.size === size);
+      if (existingItem) {
+        return prev.map((item) =>
+          item.productId === product._id && item.size === size
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+      }
+      return [
+        ...prev,
+        {
+          id: product._id,
+          productId: product._id,
+          product,
+          quantity: 1,
+          size,
+          price: product.price,
+        },
+      ];
+    });
+  };
 
-  const removeFromCart = async (productId: string, size: string) => {};
+  const removeFromCart = async (productId: string, size: string) => {
+    setCartItems((prev) => prev.filter((item) => !(item.productId === productId && item.size === size)));
+  };
 
   const updateQuantity = async (
     product: Product,
     quantity: number,
     size: string = "M",
-  ) => {};
+  ) => {
+    if (quantity < 1) {
+      removeFromCart(product._id, size);
+      return;
+    }
+    setCartItems((prev) =>
+      prev.map((item) =>
+        item.productId === product._id && item.size === size
+          ? { ...item, quantity }
+          : item
+      )
+    );
+  };
 
-  const clearCart = async () => {};
+  const clearCart = async () => {
+    setCartItems([]);
+  };
+
+  useEffect(() => {
+    const total = cartItems.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    );
+    setCartTotal(total);
+  }, [cartItems]);
 
   const itemCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 

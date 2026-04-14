@@ -3,7 +3,7 @@ import { useLocalSearchParams } from "expo-router";
 import React, { useEffect, useState } from "react";
 import { Image, ScrollView, Text, View, ActivityIndicator } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import Header from "@/components/Header";
+import Header from "@/components/header";
 import { COLORS } from "@/constants";
 import type { Order, Product } from "@/constants/types";
 import { dummyOrders } from "@/assets/assets";

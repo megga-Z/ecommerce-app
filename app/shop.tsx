@@ -4,6 +4,7 @@ import ProductCard from "@/components/ProductCard";
 import { COLORS } from "@/constants";
 import { Product } from "@/constants/types";
 import { Ionicons } from "@expo/vector-icons";
+import { useLocalSearchParams } from "expo-router";
 import React, { useEffect, useState } from "react";
 import { ActivityIndicator, Pressable, Text, View } from "react-native";
 import { FlatList, TextInput } from "react-native-gesture-handler";
@@ -12,6 +13,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Shop(){
 
+const { category } = useLocalSearchParams<{ category?: string }>();
+const [searchQuery, setSearchQuery] = useState("");
 const [products, setPoducts] = useState<Product[]>([])
 const [loading, setLoading] = useState(true)
 const [loadingMore, setLoadingMore] = useState(false)
@@ -25,15 +28,23 @@ const fetchProducts = async (pageNumber = 1)=>{
         setLoadingMore(true)
     }
     try {
+        let filteredProducts = dummyProducts;
+        if (category && category.toLowerCase() !== "all") {
+            filteredProducts = filteredProducts.filter(p => p.category?.toLowerCase() === category.toLowerCase());
+        }
+        if (searchQuery) {
+            filteredProducts = filteredProducts.filter(p => p.name?.toLowerCase().includes(searchQuery.toLowerCase()) || p.description?.toLowerCase().includes(searchQuery.toLowerCase()));
+        }
+
         const start = (pageNumber-1)*10;
         const end = start + 10;
-        const paginatedData = dummyProducts.slice(start, end)
+        const paginatedData = filteredProducts.slice(start, end)
         if (pageNumber === 1){
             setPoducts(paginatedData)
         }else{
             setPoducts(prev=> [...prev, ...paginatedData])
         }
-        setHasMore(end < dummyProducts.length)
+        setHasMore(end < filteredProducts.length)
         setPage(pageNumber)
 
     } catch (error) {
@@ -52,7 +63,7 @@ const loadMore = ()=>{
 
 useEffect(()=>{
     fetchProducts(1)
-},[])
+},[category, searchQuery])
 
     return(
         <SafeAreaView className="flex-1 bg-surface"
@@ -67,7 +78,9 @@ useEffect(()=>{
                     color={COLORS.secondary} />
                     <TextInput className="flex-1 ml-2 text-primary
                     px-4 py-3 border-0 outline-none " placeholder="Search products..." 
-                    returnKeyType="search" placeholderTextColor={COLORS.secondary}/>
+                    returnKeyType="search" placeholderTextColor={COLORS.secondary}
+                    value={searchQuery}
+                    onChangeText={setSearchQuery}/>
                 </View>
                 {/**filter icon */}
                 <Pressable className="bg-grey-100 w-12 h-12
